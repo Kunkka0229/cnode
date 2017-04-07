@@ -1,0 +1,19 @@
+/*1px像素边框*/
+@mixin border-1px($color){
+  position: relative;
+
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    border-top: 1px solid $color;/*px*/
+  }
+};
+@mixin border-none(){
+  &:after{
+    display: none;
+  }
+}
